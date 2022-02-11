@@ -17,6 +17,18 @@ class ContainerDemo1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
+              width: 100,
+              height: 100,
+              decoration: new BoxDecoration(
+                 color: Colors.green,
+                //设置四周圆角 角度
+                borderRadius: BorderRadius.all(Radius.circular(4.0)),
+              ),
+              padding: const EdgeInsets.all(8.0),
+              alignment: Alignment.center,
+              transform: new Matrix4.rotationZ(0.3),
+            ),
+            Container(
               width: 80,
               height: 80,
               color: Colors.red,
