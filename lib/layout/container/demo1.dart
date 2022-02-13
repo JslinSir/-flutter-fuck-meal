@@ -31,7 +31,6 @@ class ContainerDemo1 extends StatelessWidget {
                       offset: Offset(2, 1), //x,y轴
                       color: Colors.indigo, //投影颜色
                       blurRadius: 30, //模糊半径
-                      blurStyle: BlurStyle.normal, //模糊风格
                       spreadRadius: 20 //扩展半径
 
                       )
