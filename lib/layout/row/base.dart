@@ -11,17 +11,74 @@ class RowBase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('RowBase'),
-      ),
-      body: new Row(
-        children: <Widget>[
-          const Text('你好'),
-          const Text('你好'),
-          const Text('你好'),
-        ],
-      ),
-    );
+        appBar: new AppBar(
+          title: new Text('RowBase'),
+        ),
+        body: ListView(
+          children: [
+            new Row(
+              children: <Widget>[
+                const Text('你好'),
+                const Text('你好'),
+                const Text('你好'),
+              ],
+            ),
+            // 主轴开始排列
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                const Text('你好'),
+                const Text('你好'),
+                const Text('你好'),
+              ],
+            ),
+            // row 居中排列
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Text('你好'),
+                const Text('你好'),
+                const Text('你好'),
+              ],
+            ),
+            //  row 结束位置排列
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                const Text('你好'),
+                const Text('你好'),
+                const Text('你好'),
+              ],
+            ),
+            // row 两边对齐
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                const Text('你好'),
+                const Text('你好'),
+                const Text('你好'),
+              ],
+            ),
+            // row 环绕对齐
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                const Text('你好'),
+                const Text('你好'),
+                const Text('你好'),
+              ],
+            ),
+            // row 等分对齐
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                const Text('你好'),
+                const Text('你好'),
+                const Text('你好'),
+              ],
+            ),
+          ],
+        ));
   }
 }
 
