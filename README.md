@@ -26,8 +26,19 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 
 # 实战
 * [登录布局](./lib//demo/readme.md)
+* 给登录增加交互
+* 学习dart
+
 
 
 
 # 效果演示
 <img src='./lib/demo/login.png' width=325 height=660 object-fit='contain'/>
+
+# TODO List
+* 输入框学校
+* 增加登录交互
+* 写一个我的页面
+* dart 语言学习
+* 学习使用组件
+* 写一个简单商城首页
