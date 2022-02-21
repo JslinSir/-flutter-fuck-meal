@@ -5,13 +5,15 @@ import './layout/container/demo1.dart'; // container 用法
 import './layout/text/text.dart';  // text 部件
 import './layout/stack/stack.dart'; // stack 层叠布局
 import './demo/login.dart'; //登录页模拟
+import './demo/calculator/calculator.dart'; //计算器 实践
+ 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(title: 'Welcome to Flutter',
-     home: new StackEmp());
+     home: new CalculatorDemo());
   }
 }
 

@@ -36,9 +36,12 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 <img src='./lib/demo/login.png' width=325 height=660 object-fit='contain'/>
 
 # TODO List
-* 输入框学校
+* 活动tag
+* 输入框学习
 * 增加登录交互
 * 写一个我的页面
 * dart 语言学习
 * 学习使用组件
+* 写一个计算器示例 
+* 用 GridView 重构计算器
 * 写一个简单商城首页
