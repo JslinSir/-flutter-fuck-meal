@@ -19,7 +19,9 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 * [Row布局](./lib/layout/row/readme.md)
 * [Column布局](./lib/layout/column/readme.md)
 * [Container布局](./lib/layout/container/readme.md)
+* [Wrap 布局](./lib/layout/wrap/readme.md)
 * [Stack, Positioned 布局](./lib/layout/stack/readme.md)
+* [Align 布局](./lib/layout/align/readme.md)
 
 # 遇到的问题&解决方案
 * [布局中遇到的问题](./lib/issue/readme.md)

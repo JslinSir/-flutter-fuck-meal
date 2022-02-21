@@ -18,7 +18,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 30),
+         
             padding: EdgeInsets.all(30),
             alignment: Alignment.bottomRight,
             width: window.physicalSize.width,
