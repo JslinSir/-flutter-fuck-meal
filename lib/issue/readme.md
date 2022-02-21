@@ -12,3 +12,6 @@ Failed assertion: line 959 pos 7: 'layoutConstraints.maxWidth < double.infinity'
 * 解决方法：嵌套一层 Expanded
 * Expanded： 使子部件在 Row，Column，Flex 中 填充可用空间
 * 官网介绍：`Creates a widget that expands a child of a [Row], [Column], or [Flex] so that the child fills the available space along the flex widget's main axis.`
+
+## 关于键盘弹起屏幕超出边界溢出问题
+* 解决方案： 在 Scaffold 组件中增加  resizeToAvoidBottomInset:false , //输入框抵住键盘 ,防止键盘弹起布局溢出

@@ -33,7 +33,7 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 
 
 # 效果演示
-<img src='./lib/demo/login.png' width=325 height=660 object-fit='contain'/>
+<img src='./lib/demo/login/login.png' width=325 height=660 object-fit='contain'/>
 
 # TODO List
 * 输入框学校
