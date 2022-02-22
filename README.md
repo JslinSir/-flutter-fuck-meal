@@ -1,12 +1,19 @@
 # flutter 学习&实战
-  学习flutter
+  学习flutter布局，其实对于一个前端开发者来说，flutter布局很别扭，写起来很繁琐，很麻烦。
+  但是呢，学习这个东西，不要因为自己不喜欢，而去抵触，当你明白其布局原来，布局组件如何使用时，其实写起来也很简单！
+  下面记录了一些flutter的学习心得，花些时间看看学学写写，你也会了。
 
-## 官方教程
+
+# 官方教程
 * [Flutter 布局基础教程](https://flutter.cn/docs/codelabs/layout-basics)
 * [Flutter 中的布局](https://flutter.cn/docs/development/ui/layout)
 * [为你的 Flutter 应用加入交互体验](https://flutter.cn/docs/development/ui/interactive)
 * [Flutter 中文社区教程](https://flutter.cn/community/tutorials)
 * [dart 中文文档](https://dart.cn/guides)  
+
+# 环境搭建
+ 我这里用的是mac进行开发的，所以这里记录了下mac下的flutter 环境搭建
+* [mac环境搭建](./lib//issue/macEnvBuild.md)
 
 # Widgets 介绍
 Widgets   [ˈwɪdʒɪts]  小部件(组件)
