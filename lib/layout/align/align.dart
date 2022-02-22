@@ -10,7 +10,7 @@ class AlignBase extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('Wrap'),
+          title: new Text('Align'),
         ),
         body: Container(
           height: 120.0,

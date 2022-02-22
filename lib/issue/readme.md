@@ -15,3 +15,31 @@ Failed assertion: line 959 pos 7: 'layoutConstraints.maxWidth < double.infinity'
 
 ## 关于键盘弹起屏幕超出边界溢出问题
 * 解决方案： 在 Scaffold 组件中增加  resizeToAvoidBottomInset:false , //输入框抵住键盘 ,防止键盘弹起布局溢出
+
+## 设置底部边框
+```
+  Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                      color: Color(0xffEDEDED),
+                      width: 1,
+                    ))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [Text('我的订单'), Icon(Icons.navigate_next)],
+                    ),
+                  )
+```
+
+## 设置图片圆角
+```
+ClipRRect(
+            borderRadius: BorderRadius.circular(25),
+            child: Image.network(
+                    'https://semantic-ui.com/images/avatar2/large/kristy.png',
+                    fit: BoxFit.cover,
+                    ),
+            ),
+```

@@ -25,10 +25,12 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 
 # 遇到的问题&解决方案
 * [布局中遇到的问题](./lib/issue/readme.md)
+* [如何设置底部边框](./lib/issue/readme.md)
+* [如何设置图片圆角](./lib/issue/readme.md)
 
 # 实战
-* [登录布局](./lib//demo/readme.md)
-* 给登录增加交互
+* 登录布局 ✅
+* 我的页面 ✅ 
 * 学习dart
 
 
@@ -36,6 +38,7 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 
 # 效果演示
 <img src='./lib/demo/login/login.png' width=325 height=660 object-fit='contain'/>
+<img src='./lib/demo/my/my.png' width=325 height=660 object-fit='contain'/>
 
 # TODO List
 * 活动tag
