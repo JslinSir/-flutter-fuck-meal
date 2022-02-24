@@ -19,7 +19,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Colors.black),
+        style: TextStyle(color: Colors.black,fontSize: 24),
       ),
     );
   }
@@ -36,7 +36,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: color),
+        style: TextStyle(color: color,fontSize: 24),
       ),
     );
   }
@@ -54,7 +54,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white,fontSize: 24),
       ),
     );
   }
@@ -72,8 +72,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
             padding: EdgeInsets.all(30),
             alignment: Alignment.bottomRight,
             width: window.physicalSize.width,
-            height: 200,
-            decoration: BoxDecoration(),
+            height: 240,
             child: Text(
               '123',
               style: TextStyle(
@@ -93,7 +92,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         _buildRadioBtn('AC'),
-                        _buildRadioBtn('✖️'),
+                        _buildRadioBtn('Back'),
                         _buildRadioBtn('%'),
                         _buildOptionBtn('÷')
                       ],
@@ -107,7 +106,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
                         _buildNumsBtn('7'),
                         _buildNumsBtn('8'),
                         _buildNumsBtn('9'),
-                        _buildOptionBtn('*')
+                        _buildOptionBtn('x')
                       ],
                     ),
                   ),
