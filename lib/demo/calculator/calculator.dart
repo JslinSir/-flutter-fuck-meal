@@ -1,5 +1,8 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import './cacuHelp.dart';
 
 class CalculatorDemo extends StatefulWidget {
   @override
@@ -7,9 +10,17 @@ class CalculatorDemo extends StatefulWidget {
 }
 
 class _MyCalculatorState extends State<CalculatorDemo> {
-  final cacuConfig = [];
+  String leftText = '0';
 
-  Widget _buildRadioBtn(String text,) {
+  String rightText = '0';
+
+  String optin = '';
+
+  bool optionStauts = false;
+
+  Widget _buildRadioBtn(
+    String text,
+  ) {
     return ElevatedButton(
       onPressed: () => {},
       style: ButtonStyle(
@@ -19,7 +30,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Colors.black,fontSize: 24),
+        style: TextStyle(color: Colors.black, fontSize: 24),
       ),
     );
   }
@@ -27,7 +38,18 @@ class _MyCalculatorState extends State<CalculatorDemo> {
   // 数字按钮组件
   Widget _buildNumsBtn(String text, [color]) {
     return ElevatedButton(
-      onPressed: () => {},
+      onPressed: () {
+        optionStauts == false
+            ? setState(() {
+                leftText = '$leftText$text';
+              })
+            : setState(() {
+                rightText = '$rightText$text';
+              });
+
+        print('leftText:$leftText');
+        print('rightText:$rightText');
+      },
       style: ButtonStyle(
         backgroundColor:
             MaterialStateProperty.all(Color.fromARGB(221, 77, 75, 75)),
@@ -36,7 +58,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: color,fontSize: 24),
+        style: TextStyle(color: color, fontSize: 24),
       ),
     );
   }
@@ -46,7 +68,11 @@ class _MyCalculatorState extends State<CalculatorDemo> {
     String text,
   ) {
     return ElevatedButton(
-      onPressed: () => {},
+      onPressed: () {
+        setState(() {
+          optin = text;
+        });
+      },
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(Colors.orange),
         minimumSize: MaterialStateProperty.all(Size(70, 70)),
@@ -54,7 +80,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Colors.white,fontSize: 24),
+        style: TextStyle(color: Colors.white, fontSize: 24),
       ),
     );
   }
@@ -74,9 +100,9 @@ class _MyCalculatorState extends State<CalculatorDemo> {
             width: window.physicalSize.width,
             height: 240,
             child: Text(
-              '123',
+              leftText,
               style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 40,
                   color: Colors.white,
                   fontWeight: FontWeight.bold),
             ),
