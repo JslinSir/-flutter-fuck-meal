@@ -47,7 +47,19 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 <img src='./lib/demo/login/login.png' width=325 height=660 object-fit='contain'/>
 <img src='./lib/demo/my/my.png' width=325 height=660 object-fit='contain'/>
 
+
+# 目录
+
+```
+└──────── lib/   项目源码目录
+    ├──── lib/demo      布局实战源码目录（如：登录，我的页面）
+    ├──── lib/issue     布局中遇到的问题记录
+    ├──── lib/layout    布局学习源码目录
+    ├──── src/pages     实战类（布局，交互，路由，状态等）
+```
+
 # TODO List
+* 实现一个计算器
 * 活动tag
 * 输入框学习
 * 增加登录交互
