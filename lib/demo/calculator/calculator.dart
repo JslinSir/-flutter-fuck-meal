@@ -2,7 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import './cacuHelp.dart';
+import 'package:flutter_application_1/demo/calculator/cacuHelp.dart';
 
 class CalculatorDemo extends StatefulWidget {
   @override
@@ -10,19 +10,53 @@ class CalculatorDemo extends StatefulWidget {
 }
 
 class _MyCalculatorState extends State<CalculatorDemo> {
-  String leftText = '0';
+// 运算符左侧值
+  String leftVal = '0';
 
-  String rightText = '0';
+// 运算符右侧值
+  String rightVal = '';
 
+// 选中的操作符
   String optin = '';
 
-  bool optionStauts = false;
+// 运算结果
+  num result = 0;
+
+  bool JsLin = false;
+
+  reset() {
+    setState(() {
+      leftVal = '0';
+      rightVal = '';
+      optin = '';
+      result = 0;
+    });
+  }
 
   Widget _buildRadioBtn(
     String text,
   ) {
     return ElevatedButton(
-      onPressed: () => {},
+      onPressed: () {
+        if (text == 'AC') {
+          reset();
+        } else if (text == 'Jslin') {
+          setState(() {
+            JsLin = !JsLin;
+          });
+        } else {
+          if (result != 0 && rightVal != '') reset();
+          if (rightVal == '' && leftVal.length > 1) {
+            var tepArry = leftVal.split('');
+            tepArry.removeLast();
+            var transfVal = tepArry.join('');
+            setState(() {
+              leftVal = transfVal;
+              result = num.parse(transfVal);
+            });
+          } //截取左边
+        }
+      },
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(Colors.grey[400]),
         minimumSize: MaterialStateProperty.all(Size(70, 70)),
@@ -39,16 +73,20 @@ class _MyCalculatorState extends State<CalculatorDemo> {
   Widget _buildNumsBtn(String text, [color]) {
     return ElevatedButton(
       onPressed: () {
-        optionStauts == false
+        if (leftVal.contains('.') && text == '.') {
+          return;
+        }
+        optin == ''
             ? setState(() {
-                leftText = '$leftText$text';
+                String lv = '$leftVal$text';
+                leftVal = lv;
+                result = num.parse(lv);
               })
             : setState(() {
-                rightText = '$rightText$text';
+                String rv = '$rightVal$text';
+                rightVal = rv;
+                result = num.parse(rv);
               });
-
-        print('leftText:$leftText');
-        print('rightText:$rightText');
       },
       style: ButtonStyle(
         backgroundColor:
@@ -65,13 +103,25 @@ class _MyCalculatorState extends State<CalculatorDemo> {
 
 // 操作按钮组件
   Widget _buildOptionBtn(
-    String text,
+    String _text,
   ) {
     return ElevatedButton(
       onPressed: () {
-        setState(() {
-          optin = text;
-        });
+        if (_text == '=') {
+          setState(() {
+            result = leftVal != '' && rightVal != ''
+                ? CacuHelp()
+                    .cacu(optin, num.parse(leftVal), num.parse(rightVal))
+                : 0;
+            optin = '';
+            leftVal = result.toString();
+            rightVal = '';
+          });
+        } else {
+          setState(() {
+            optin = _text;
+          });
+        }
       },
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(Colors.orange),
@@ -79,7 +129,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
         shape: MaterialStateProperty.all(CircleBorder()), //圆角弧度
       ),
       child: Text(
-        text,
+        _text,
         style: TextStyle(color: Colors.white, fontSize: 24),
       ),
     );
@@ -100,11 +150,21 @@ class _MyCalculatorState extends State<CalculatorDemo> {
             width: window.physicalSize.width,
             height: 240,
             child: Text(
-              leftText,
+              '${result == double.infinity ? '错误' : result.toString()}',
               style: TextStyle(
                   fontSize: 40,
                   color: Colors.white,
                   fontWeight: FontWeight.bold),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            width: window.physicalSize.width,
+            child: Text(
+              '${JsLin ? 'Powerd By JsLin' : ''}',
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
           ),
           Expanded(
@@ -119,7 +179,7 @@ class _MyCalculatorState extends State<CalculatorDemo> {
                       children: [
                         _buildRadioBtn('AC'),
                         _buildRadioBtn('Back'),
-                        _buildRadioBtn('%'),
+                        _buildRadioBtn('Jslin'),
                         _buildOptionBtn('÷')
                       ],
                     ),

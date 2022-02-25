@@ -43,3 +43,15 @@ ClipRRect(
                     ),
             ),
 ```
+
+## 关于调用实例中的方法问题
+封装了一个类 ，调用实例方法的时候报错，如下调用
+```
+  result = CacuHelp.cacu(_text,num.parse(leftVal),num.parse(rightVal));
+```
+报错信息：`Instance member 'cacu' can't be accessed using static access`:不可以静态的访问 实例成员
+修改如下：即，调用实例方式的时候，要先初始化创建一个实例
+```
+  result = CacuHelp().cacu(_text,num.parse(leftVal),num.parse(rightVal));
+```
+

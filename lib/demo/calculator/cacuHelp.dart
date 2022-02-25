@@ -1,4 +1,15 @@
-class cacuHelp {
+
+ enum EOptionType {
+   add,
+   subtract,
+   multi,
+   division
+ }
+
+class CacuHelp {
+
+  
+
   num add(num a, num b) {
     return a + b;
   }
@@ -24,14 +35,15 @@ class cacuHelp {
       case '-':
         res = this.subtract(a, b);
         break;
-      case '+':
+      case 'x':
         res = this.multi(a, b);
         break;
-      case '+':
+      case '÷':
         res = this.division(a, b);
         break;
     }
-
+     print('option:$option');
+     print('res:$res');
     return res;
   }
 }
