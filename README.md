@@ -1,4 +1,5 @@
-# flutter 学习&实战
+# flutter 学习 & 实战
+  flutter fuck meal : 干饭 Flutter ！
   学习flutter布局，其实对于一个前端开发者来说，flutter布局很别扭，写起来很繁琐，很麻烦。
   但是呢，学习这个东西，不要因为自己不喜欢，而去抵触，当你明白其布局原来，布局组件如何使用时，其实写起来也很简单！
   下面记录了一些flutter的学习心得，花些时间看看学学写写，你也会了,其实知识这个东西，你去学它，他就会变得简单，加油💪🏻
@@ -39,14 +40,18 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 # 实战
 * 登录布局 ✅
 * 我的页面 ✅ 
+* 流式布局实践  ✅ 
+* 实现一个计算器 ✅（已实现计算交互）
 * 学习dart
 
 
 
 
 # 效果演示
+<img src='./lib/layout/wrap/wrap.png' width=325 height=660 object-fit='contain'/>
 <img src='./lib/demo/login/login.png' width=325 height=660 object-fit='contain'/>
 <img src='./lib/demo/my/my.png' width=325 height=660 object-fit='contain'/>
+<img src='./lib/demo/calculator/calcu.png' width=325 height=660 object-fit='contain'/>
 
 
 # 目录
@@ -60,13 +65,10 @@ Flutter 从 React 中吸取灵感，通过现代化框架创建出精美的组�
 ```
 
 # TODO List
-* 实现一个计算器
-* 活动tag
+ 
 * 输入框学习
 * 增加登录交互
-* 写一个我的页面
 * dart 语言学习
 * 学习使用组件
-* 写一个计算器示例 
-* 用 GridView 重构计算器
 * 写一个简单商城首页
+* 路由，状态管理等...
